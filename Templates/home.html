@@ -1,11 +1,14 @@
 <html>  
    <body>  
-       <h3>Sample flask </h3>  
-      <form action = "http://localhost:5000/success" method = "POST">  
-         <p>Name <input type = "text" name = "TV" /></p>  
-         <p>Email <input type = "text" name = "Radio" /></p>  
-         <p>Contact <input type = "text" name = "Newspaper" /></p>
+       <h3>Sales prediction - My first webpage </h3>  
+       <form action="{{ url_for('predict')}}" method="post"> 
+         <p>TV <input type = "text" name = "TV" /></p>  
+         <p>RADIO <input type = "text" name = "Radio" /></p>  
+         <p>NEWSPAPER <input type = "text" name = "Newspaper" /></p>
          <p><input type = "submit" value = "predict" /></p>  
       </form>  
+      <br>
+      <br>
+      {{prediction_text}}
    </body>  
 </html>  
